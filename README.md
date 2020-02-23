@@ -2,8 +2,9 @@
 
 These modulefiles make it easier to use CMB data analysis software on the Tiger and Della clusters at Princeton University.
 
-## Available Modules
-Append this line to your `.bashrc`,
+## Installation
+
+These modules are already on Tiger and Della. Append this line to your `.bashrc`,
 
 ```
 module use --append /tigress/zequnl/shared/modulefiles
@@ -13,6 +14,8 @@ These modules are built against the default anaconda/fftw/gsl on tiger/della, so
 ```
 module load fftw/gcc/3.3.4 gsl/2.4 anaconda3
 ```
+
+## Available Modules
 
 You'll then have access to some new modules when you type `module avail`,
 
@@ -37,10 +40,13 @@ Following Matthew Hasselfield, I am compiling everything with `gcc`.
 
 ### pixell
 
-I installed this with just 
+I installed this with 
 
 ```
-pip install . --prefix=$PSROOT
+module load anaconda3
+export FFLAGS=-fPIC
+python setup.py build_ext -i
+pip install . --prefix=/tigress/zequnl/shared/software/pixell/master/
 ```
 
 ### healpy
