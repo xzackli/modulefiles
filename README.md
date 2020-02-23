@@ -1,6 +1,8 @@
 # modulefiles
 
-These modulefiles make it easier to use CMB data analysis software on the Tiger and Della clusters at Princeton University.
+Use these module files so you don't experience the tortuosity of installing software. 
+
+(for Tiger and Della clusters at Princeton)
 
 ## Installation
 
