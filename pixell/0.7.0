@@ -1,0 +1,9 @@
+#%Module 1.0
+#
+#
+set proot /tigress/zequnl/shared/software/pixell/0.7.0/
+
+prereq anaconda3
+
+prepend-path             LD_LIBRARY_PATH $proot/lib
+prepend-path		 PYTHONPATH	 $proot/lib/python3.7/site-packages
