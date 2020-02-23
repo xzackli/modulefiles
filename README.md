@@ -50,6 +50,11 @@ pip install . --prefix=/tigress/zequnl/shared/software/pixell/master/
 ```
 
 ### healpy
+
+```
+pip install healpy --prefix=/tigress/zequnl/shared/software/healpy/1.13.0/
+```
+
 The pip version of healpy 1.13.0 seems to depend on a more recent version of gcc than is available by default on tiger. This can be fixed by including `libstdc++.so.6` from anaconda in your `LD_LIBRARY_PATH`. However, it's really not desirable to put the anaconda `lib` folder into your `LD_LIBRARY_PATH`, as it breaks the universe (including emacs, somehow).
 
 Instead, I symlink that static library into the module's software directory.
@@ -63,4 +68,8 @@ The path to the module's `lib` directory is then prepended to the `LD_LIBRARY_PA
 
 ### NaMaster
 
-NaMaster requires installing `cfitsio` and the C version of `HEALPix`. I require the default tiger/della modules `gsl/2.4` and `fftw/gcc`.
+NaMaster requires installing `cfitsio` and the C version of `HEALPix`. I require the default tiger/della modules `gsl/2.4` and `fftw/gcc`. I followed the usual NERSC instructions, but then ran
+
+```
+pip install . --prefix= ...
+```
