@@ -1,6 +1,6 @@
 # modulefiles
 
-Use these module files so you don't experience the tortuosity of installing software. 
+Use these module files so you don't experience the tortuosity of installing pixell/healpy/NaMaster. 
 
 (for Tiger and Della clusters at Princeton)
 
