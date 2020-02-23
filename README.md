@@ -31,7 +31,7 @@ pixell/0.7.0    pixell/master
 
 It's recommended that you load the specific version you want, i.e.
 ```
-module load pixel/0.7.0
+module load pixell/0.7.0
 ```
 
 The master versions reflect the GitHub master branch, i.e. `pixell/master`. These are kept up to date manually, so bug me if they need updating on tiger/della. 
