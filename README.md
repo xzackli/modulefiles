@@ -1,10 +1,17 @@
 # modulefiles
 
+These modulefiles make it easier to use CMB data analysis software on the Tiger and Della clusters at Princeton University.
+
 ## Available Modules
 Append this line to your `.bashrc`,
 
 ```
 module use --append /tigress/zequnl/shared/modulefiles
+```
+
+These modules are built against the default anaconda/fftw/gsl on tiger/della, so you will want to load those in first.
+```
+module load fftw/gcc/3.3.4 gsl/2.4 anaconda3
 ```
 
 You'll then have access to some new modules when you type `module avail`,
@@ -14,6 +21,8 @@ healpy/1.13.0
 NaMaster/1.0.1  NaMaster/master 
 pixell/0.7.0    pixell/master
 ```
+
+## Loading Modules
 
 It's recommended that you load the specific version you want, i.e.
 ```
