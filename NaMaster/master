@@ -1,0 +1,16 @@
+#%Module 1.0
+#
+# moby2_deps
+#
+set proot /tigress/zequnl/shared/software/NaMaster/master/
+
+prereq anaconda3
+prereq gsl/2.4
+prereq fftw/gcc
+
+setenv		 HEALPIX    $proot/src/Healpix_3.60
+
+prepend-path             LD_LIBRARY_PATH $proot/lib
+append-path              CPATH           $proot/include
+
+prepend-path		 		  PYTHONPATH	 $proot/lib/python3.7/site-packages
