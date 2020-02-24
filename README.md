@@ -12,6 +12,7 @@ module load fftw/gcc/3.3.4 gsl/2.4 anaconda3
 module load healpy/1.13.0
 module load pixell/0.7.0
 module load NaMaster/1.0.1
+module load nawrapper/0.1.0
 ```
 
 ## Installation
@@ -35,6 +36,7 @@ You'll then have access to some new modules when you type `module avail`,
 healpy/1.13.0   
 NaMaster/1.0.1  NaMaster/master 
 pixell/0.7.0    pixell/master
+nawrapper/0.1.0
 ```
 
 ## Loading Modules

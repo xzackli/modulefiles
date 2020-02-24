@@ -1,0 +1,11 @@
+#%Module 1.0
+#
+#
+set proot /tigress/zequnl/shared/software/nawrapper/0.1.0/
+
+prereq anaconda3
+prereq NaMaster
+prereq pixell
+prereq healpy
+
+prepend-path		 PYTHONPATH	 $proot/lib/python3.7/site-packages
