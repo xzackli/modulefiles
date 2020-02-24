@@ -1,9 +1,22 @@
 # modulefiles
 
-These modulefiles make it easier to use CMB data analysis software on the Tiger and Della clusters at Princeton University.
+Use these module files so you don't experience the tortuosity of installing pixell/healpy/NaMaster. 
 
-## Available Modules
-Append this line to your `.bashrc`,
+(for Tiger and Della clusters at Princeton)
+
+An example block to add to your .bashrc would be
+
+```
+module use --append /tigress/zequnl/shared/modulefiles
+module load fftw/gcc/3.3.4 gsl/2.4 anaconda3
+module load healpy/1.13.0
+module load pixell/0.7.0
+module load NaMaster/1.0.1
+```
+
+## Installation
+
+These modules are already on Tiger and Della. Append this line to your `.bashrc`,
 
 ```
 module use --append /tigress/zequnl/shared/modulefiles
@@ -13,6 +26,8 @@ These modules are built against the default anaconda/fftw/gsl on tiger/della, so
 ```
 module load fftw/gcc/3.3.4 gsl/2.4 anaconda3
 ```
+
+## Available Modules
 
 You'll then have access to some new modules when you type `module avail`,
 
@@ -26,7 +41,7 @@ pixell/0.7.0    pixell/master
 
 It's recommended that you load the specific version you want, i.e.
 ```
-module load pixel/0.7.0
+module load pixell/0.7.0
 ```
 
 The master versions reflect the GitHub master branch, i.e. `pixell/master`. These are kept up to date manually, so bug me if they need updating on tiger/della. 
@@ -45,13 +60,21 @@ Following Matthew Hasselfield, I am compiling everything with `gcc`.
 
 ### pixell
 
-I installed this with just 
+I installed this with 
 
 ```
-pip install . --prefix=$PSROOT
+module load anaconda3
+export FFLAGS=-fPIC
+python setup.py build_ext -i
+pip install . --prefix=/tigress/zequnl/shared/software/pixell/master/
 ```
 
 ### healpy
+
+```
+pip install healpy --prefix=/tigress/zequnl/shared/software/healpy/1.13.0/
+```
+
 The pip version of healpy 1.13.0 seems to depend on a more recent version of gcc than is available by default on tiger. This can be fixed by including `libstdc++.so.6` from anaconda in your `LD_LIBRARY_PATH`. However, it's really not desirable to put the anaconda `lib` folder into your `LD_LIBRARY_PATH`, as it breaks the universe (including emacs, somehow).
 
 Instead, I symlink that static library into the module's software directory.
@@ -65,4 +88,8 @@ The path to the module's `lib` directory is then prepended to the `LD_LIBRARY_PA
 
 ### NaMaster
 
-NaMaster requires installing `cfitsio` and the C version of `HEALPix`. I require the default tiger/della modules `gsl/2.4` and `fftw/gcc`.
+NaMaster requires installing `cfitsio` and the C version of `HEALPix`. I require the default tiger/della modules `gsl/2.4` and `fftw/gcc`. I followed the usual NERSC instructions, but then ran
+
+```
+pip install . --prefix= ...
+```
