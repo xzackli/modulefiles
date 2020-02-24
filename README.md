@@ -1,6 +1,6 @@
 # modulefiles
 
-Use these module files so you don't experience the tortuosity of installing pixell/healpy/NaMaster on the Tiger and Della clusters at Princeton.
+Use these module files so you don't experience the tortuosity of installing pixell/healpy/NaMaster on the Tiger and Della clusters at Princeton. If you only use the mydella Jupyterlab, then you only need to run [one line](###-jupyter-kernel).
 
 An example block to add to your .bashrc would be
 
