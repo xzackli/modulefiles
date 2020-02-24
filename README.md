@@ -1,8 +1,6 @@
 # modulefiles
 
-Use these module files so you don't experience the tortuosity of installing pixell/healpy/NaMaster. 
-
-(for Tiger and Della clusters at Princeton)
+Use these module files so you don't experience the tortuosity of installing pixell/healpy/NaMaster on the Tiger and Della clusters at Princeton.
 
 An example block to add to your .bashrc would be
 
@@ -28,7 +26,19 @@ These modules are built against the default anaconda/fftw/gsl on tiger/della, so
 module load fftw/gcc/3.3.4 gsl/2.4 anaconda3
 ```
 
-## Available Modules
+
+### Jupyter Kernel
+
+You can add a convenient Jupyter kernel with these libraries for use in `mydella`, by copying a template to your kernel directory.
+
+```
+cp -r /tigress/zequnl/shared/modulefiles/kernels/act $HOME/.local/share/jupyter/kernels/
+```
+
+
+
+## Usage
+### Available Modules
 
 You'll then have access to some new modules when you type `module avail`,
 
@@ -39,7 +49,7 @@ pixell/0.7.0    pixell/master
 nawrapper/0.1.0
 ```
 
-## Loading Modules
+### Loading Modules
 
 It's recommended that you load the specific version you want, i.e.
 ```
@@ -48,13 +58,6 @@ module load pixell/0.7.0
 
 The master versions reflect the GitHub master branch, i.e. `pixell/master`. These are kept up to date manually, so bug me if they need updating on tiger/della. 
 
-## Jupyter Kernel
-
-You can add a convenient Jupyter kernel by copying this template to your kernel directory! Run the following copy command,
-
-```
-cp -r /tigress/zequnl/shared/modulefiles/kernels/act $HOME/.local/share/jupyter/kernels/
-```
 
 ## Technical Details
 
