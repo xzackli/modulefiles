@@ -1,6 +1,6 @@
 # modulefiles
 
-Use these module files so you don't experience the tortuosity of installing pixell/healpy/NaMaster on Tiger and Della clusters at Princeton.
+Use these module files so you don't experience the tortuosity of installing pixell/healpy/NaMaster on the Tiger and Della clusters at Princeton.
 
 An example block to add to your .bashrc would be
 
