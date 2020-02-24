@@ -31,6 +31,14 @@ module load pixel/0.7.0
 
 The master versions reflect the GitHub master branch, i.e. `pixell/master`. These are kept up to date manually, so bug me if they need updating on tiger/della. 
 
+## Jupyter Kernel
+
+You can add a convenient Jupyter kernel by copying this template to your kernel directory! Run the following copy command,
+
+```
+cp -r /tigress/zequnl/shared/modulefiles/kernels/act $HOME/.local/share/jupyter/kernels/
+```
+
 ## Technical Details
 
 Following Matthew Hasselfield, I am compiling everything with `gcc`. 
