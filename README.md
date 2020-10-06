@@ -96,5 +96,5 @@ The path to the module's `lib` directory is then prepended to the `LD_LIBRARY_PA
 NaMaster requires installing `cfitsio` and the C version of `HEALPix`. I require the default tiger/della modules `gsl/2.4` and `fftw/gcc`. I followed the usual NERSC instructions, but then ran
 
 ```
-pip install . --prefix= ...
+CPPFLAGS="$CPPFLAGS -I/tigress/zequnl/shared/software/NaMaster/master/include/" LDFLAGS="$LDFLAGS -L/tigress/zequnl/shared/software/NaMaster/master/lib/" pip install . --prefix=/tigress/zequnl/shared/software/NaMaster/master/
 ```
