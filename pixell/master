@@ -6,4 +6,4 @@ set proot /tigress/zequnl/shared/software/pixell/master/
 prereq anaconda3
 
 prepend-path             LD_LIBRARY_PATH $proot/lib
-prepend-path		 PYTHONPATH	 $proot/lib/python3.7/site-packages
+prepend-path		 PYTHONPATH	 $proot/lib/python3.8/site-packages

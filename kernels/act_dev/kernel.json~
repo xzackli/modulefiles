@@ -1,0 +1,9 @@
+{
+ "argv": [
+  "/tigress/zequnl/shared/modulefiles/kernels/module_loads_dev.sh",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "ACT (Python 3.7 Anaconda)",
+ "language": "python"
+}

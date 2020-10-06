@@ -12,4 +12,4 @@ setenv		 HEALPIX    $proot/src/Healpix_3.60
 prepend-path             LD_LIBRARY_PATH $proot/lib
 append-path              CPATH           $proot/include
 
-prepend-path		 		  PYTHONPATH	 $proot/lib/python3.7/site-packages
+prepend-path		 		  PYTHONPATH	 $proot/lib/python3.8/site-packages
