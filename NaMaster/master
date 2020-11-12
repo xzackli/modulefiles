@@ -10,6 +10,7 @@ prereq fftw/gcc/3.3.4
 setenv		 HEALPIX    $proot/src/Healpix_3.60
 
 prepend-path             LD_LIBRARY_PATH $proot/lib
+prepend-path             LD_LIBRARY_PATH $proot/lib/python3.8/site-packages
 append-path              CPATH           $proot/include
 
 prepend-path		 		  PYTHONPATH	 $proot/lib/python3.8/site-packages
