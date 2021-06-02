@@ -32,7 +32,7 @@ module load fftw/gcc/3.3.4 gsl/2.4 anaconda3
 You can add a convenient Jupyter kernel with these libraries for use in `mydella`, by copying a template to your kernel directory.
 
 ```
-cp -r /tigress/zequnl/shared/modulefiles/kernels/act $HOME/.local/share/jupyter/kernels/
+cp -r /tigress/zequnl/shared/modulefiles/kernels/act_dev $HOME/.local/share/jupyter/kernels/
 ```
 
 
